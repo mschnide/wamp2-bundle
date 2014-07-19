@@ -1,0 +1,27 @@
+{
+    "name": "mschnide/wamp2-bundle",
+    "type": "symfony-bundle",
+    "description": "This Bundle provides a websocket feature (wamp v2)",
+    "keywords": ["rest"],
+    "homepage": "https://github.com/mschnide/wamp2-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Markus Schnider",
+            "email": "mschnide@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "psr/log": "~1.0",
+        "symfony/framework-bundle": "~2.5",
+        "ratchet/pawl": "dev-master",
+        "voryx/thruway": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "FOS\\RestBundle": ""
+        }
+    },
+    "target-dir": "Mschnide/WampBundle"
+}
