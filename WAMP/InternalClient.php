@@ -2,6 +2,7 @@
 
 namespace Mschnide\WampBundle\WAMP;
 
+use Mschnide\WampBundle\WAMP\Functions\FunctionInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -87,7 +88,7 @@ class InternalClient extends Client implements ContainerAwareInterface
         $functions = $this->container->getParameter('mschnide_wamp.client.functions');
         foreach ($functions as $function) {
             $service = $this->container->get($function);
-            if ($service instanceof Functions\FunctionInterface) {
+            if ($service instanceof FunctionInterface) {
                 $name = $service->getName();
                 $call = array($service, $service->getFunctionName());
                 $this->getCallee()->register($session, $name, $call);
