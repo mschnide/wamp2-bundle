@@ -2,7 +2,7 @@
     "name": "mschnide/wamp2-bundle",
     "type": "symfony-bundle",
     "description": "This Bundle provides a websocket feature (wamp v2)",
-    "keywords": ["websocket"],
+    "keywords": ["websocket", "wamp"],
     "homepage": "https://github.com/mschnide/wamp2-bundle",
     "license": "MIT",
     "authors": [
